@@ -1,0 +1,8 @@
+node_modules/
+out/
+.venv/
+models/
+__pycache__/
+.claude/skills/lab06-collect/
+lab06-video.mp4
+lab06-bundle.zip
