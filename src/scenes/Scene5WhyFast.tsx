@@ -13,7 +13,7 @@ const CUE = {
   chart: 4.75, // "So n items take about log base two of n checks."
   logLabel: 6.2, // "...log base two of n"
   million: 8.0, // "That's why a million items..."
-  twenty: 9.6, // "...need only twenty."
+  twenty: 9.85, // "...need only twenty." (word starts ~9.9 s)
 };
 const COUNTS = [16, 8, 4, 2, 1];
 const LINEAR = "#f87171";
