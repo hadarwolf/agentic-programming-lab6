@@ -7,7 +7,7 @@
 **Running example:** sorted array of 16 numbers, target **79**:
 `[3, 8, 12, 15, 21, 27, 34, 42, 51, 57, 64, 73, 79, 85, 91, 98]` (79 is at index 12)
 
-**Why 79:** it takes 4 checks, which is the worst case for 16 items (⌈log₂ 17⌉ = 4), so every step of the demo gets shown. An earlier draft used 73, which is found on the 2nd check: too lucky to teach from.
+**Why 79:** it takes 4 checks (three discards, then the find), so the demo shows the halving repeat several times without dragging. An earlier draft used 73, which is found on the 2nd check: too lucky to teach from. (The worst case for 16 items is 5 checks, e.g. 98: mids 42, 73, 85, 91, 98.)
 
 Trace (low/high inclusive, mid = ⌊(low+high)/2⌋):
 | step | low | high | mid | a[mid] | decision |
@@ -37,7 +37,7 @@ Trace (low/high inclusive, mid = ⌊(low+high)/2⌋):
 
 ## Scene 2: Sorted is the key (`scene2`)
 **Visual:** The row collapses into 16 cells that sort themselves into order. The target "79" appears above, and a "?" hovers over the row.
-**Narration:** "Here's the catch: the list has to be sorted. So let's take sixteen numbers, smallest to largest, and look for seventy-nine. Where would you start?"
+**Narration:** "There's just one rule: the list has to be sorted. So let's take sixteen numbers, smallest to largest, and look for seventy-nine. Where would you start?"
 
 ## Scene 3: First check (`scene3`)
 **Visual:** `low` and `high` arrows sit under the ends, and the `mid` cell (42) glows yellow. A comparison bubble shows "42 < 79". The left half (indices 0–7, including mid) fades to grey, and `low` jumps to index 8.

@@ -1,7 +1,7 @@
 {
   "test": "Let's find a number in a sorted list, fast.",
   "scene1": "Say you're hunting for one number in a list of a thousand. If you check them one at a time, that could take a thousand tries. Luckily, there's a much faster way.",
-  "scene2": "Here's the catch: the list has to be sorted. So let's take sixteen numbers, smallest to largest, and look for seventy-nine. Where would you start?",
+  "scene2": "There's just one rule: the list has to be sorted. So let's take sixteen numbers, smallest to largest, and look for seventy-nine. Where would you start?",
   "scene3": "Start in the middle. That's forty-two. It's smaller than seventy-nine, and since the list is sorted, everything to its left is smaller too. So we toss that whole half.",
   "scene4": "Now just repeat with what's left. Seventy-three? Too small, toss the left. Eighty-five? Too big, toss the right. Seventy-nine? Found it! Four checks, instead of up to sixteen.",
   "scene5": "Every check cuts the list in half: sixteen, eight, four, two, one. So n items take about log base two of n checks. That's why a million items need only twenty.",
