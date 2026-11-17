@@ -22,12 +22,12 @@ Trace (low/high inclusive, mid = ⌊(low+high)/2⌋):
 | scene | spoken |
 |-------|--------|
 | 1 Hook | 9.26 s |
-| 2 Sorted is the key | 8.34 s |
+| 2 Sorted is the key | 8.75 s |
 | 3 First check | 9.73 s (scene lasts 10 s, its fallback minimum) |
 | 4 Repeat | 11.14 s |
 | 5 Why it's fast | 10.45 s |
 | 6 Recap | 9.90 s |
-| **total** | **58.8 s spoken, ≈ 59 s on screen** |
+| **total** | **59.2 s spoken, ≈ 62 s on screen** (each scene adds a 0.4 s tail) |
 
 ---
 
@@ -52,12 +52,15 @@ Trace (low/high inclusive, mid = ⌊(low+high)/2⌋):
 **Narration:** "Every check cuts the list in half: sixteen, eight, four, two, one. So n items take about log base two of n checks. That's why a million items need only twenty."
 
 ## Scene 6: Recap (`scene6`)
-**Visual:** Pseudocode types in on the left; the takeaway sentence sits on the right.
+**Visual:** Title "Binary search, in four steps". Python pseudocode types in on the left. On the right, four step cards (Sorted list, Check the middle, Throw away half, Repeat) appear as each is spoken, and each one lights up its matching code lines. Ends on "Simple, and seriously fast: O(log n)".
 ```
-while low <= high:
-    mid = (low + high) // 2
-    if a[mid] == target: return mid
-    if a[mid] <  target: low  = mid + 1
-    else:                high = mid - 1
+def binary_search(a, target):  # a is sorted
+    low, high = 0, len(a) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if a[mid] == target: return mid
+        if a[mid] < target: low = mid + 1
+        else:               high = mid - 1
+    return -1  # not found
 ```
 **Narration:** "So that's binary search. Start with a sorted list, check the middle, throw away the half you don't need, and repeat until you find it. Simple, and seriously fast."
