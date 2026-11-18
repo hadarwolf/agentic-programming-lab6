@@ -21,15 +21,20 @@ Trace (low/high inclusive, mid = ⌊(low+high)/2⌋):
 
 | scene | spoken |
 |-------|--------|
+| 0 Title | 1.11 s (card lasts 2.6 s) |
 | 1 Hook | 9.26 s |
 | 2 Sorted is the key | 8.75 s |
 | 3 First check | 9.73 s (scene lasts 10 s, its fallback minimum) |
 | 4 Repeat | 11.14 s |
 | 5 Why it's fast | 10.45 s |
 | 6 Recap | 9.90 s |
-| **total** | **59.2 s spoken, ≈ 62 s on screen** (each scene adds a 0.4 s tail) |
+| **total** | **60.3 s spoken, ≈ 66 s on screen** (each scene adds a 0.4 s tail) |
 
 ---
+
+## Scene 0: Title (`title`)
+**Visual:** "BINARY SEARCH" in large letters, a row of 7 cells with the middle one lit yellow, and the subtitle "find anything in a sorted list, fast". Fades into Scene 1.
+**Narration:** "Binary search."
 
 ## Scene 1: Hook (`scene1`)
 **Visual:** A long row of numbers runs off-screen. A pointer scans left to right one cell at a time while a "checks: N" counter ticks up fast.

@@ -1,5 +1,6 @@
 {
   "test": "Let's find a number in a sorted list, fast.",
+  "title": "Binary search.",
   "scene1": "Say you're hunting for one number in a list of a thousand. If you check them one at a time, that could take a thousand tries. Luckily, there's a much faster way.",
   "scene2": "There's just one rule: the list has to be sorted. So let's take sixteen numbers, smallest to largest, and look for seventy-nine. Where would you start?",
   "scene3": "Start in the middle. That's forty-two. It's smaller than seventy-nine, and since the list is sorted, everything to its left is smaller too. So we toss that whole half.",
